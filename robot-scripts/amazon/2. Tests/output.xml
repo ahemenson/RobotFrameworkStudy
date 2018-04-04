@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180403 22:54:31.563" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<suite source="/home/eminho/Projetos/Robot Study/RobotFrameworkStudy/robot-scripts/amazon/2. Tests/amazon.robot" id="s1" name="Amazon">
+<test id="s1-t1" name="User must sign in to check out">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://www.amazon.com</arg>
+<arg>${BROWSER_2}</arg>
+</arguments>
+<msg timestamp="20180403 22:54:31.641" level="INFO">Opening browser 'Firefox' to base url 'http://www.amazon.com'.</msg>
+<status status="PASS" endtime="20180403 22:54:42.031" starttime="20180403 22:54:31.641"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180403 22:54:42.370" starttime="20180403 22:54:42.031"></status>
+</kw>
+<doc>this is some info about test</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" endtime="20180403 22:54:42.370" critical="yes" starttime="20180403 22:54:31.640"></status>
+</test>
+<doc>A resource file with reusable keywords and variables.</doc>
+<status status="PASS" endtime="20180403 22:54:42.371" starttime="20180403 22:54:31.565"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">Smoke</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Amazon" pass="1">Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
