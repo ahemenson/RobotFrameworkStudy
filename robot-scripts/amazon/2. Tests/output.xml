@@ -1,39 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20180403 22:54:31.563" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<robot generated="20180405 13:43:52.371" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
 <suite source="/home/eminho/Projetos/Robot Study/RobotFrameworkStudy/robot-scripts/amazon/2. Tests/amazon.robot" id="s1" name="Amazon">
-<test id="s1-t1" name="User must sign in to check out">
+<test id="s1-t1" name="Click List">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
-<arg>http://www.amazon.com</arg>
+<arg>https://www.americanas.com.br/</arg>
 <arg>${BROWSER_2}</arg>
 </arguments>
-<msg timestamp="20180403 22:54:31.641" level="INFO">Opening browser 'Firefox' to base url 'http://www.amazon.com'.</msg>
-<status status="PASS" endtime="20180403 22:54:42.031" starttime="20180403 22:54:31.641"></status>
+<msg timestamp="20180405 13:43:53.277" level="INFO">Opening browser 'Firefox' to base url 'https://www.americanas.com.br/'.</msg>
+<status status="PASS" endtime="20180405 13:44:37.527" starttime="20180405 13:43:53.277"></status>
 </kw>
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20180403 22:54:42.370" starttime="20180403 22:54:42.031"></status>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20180405 13:44:38.612" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180405 13:44:38.612" starttime="20180405 13:44:37.552"></status>
 </kw>
-<doc>this is some info about test</doc>
-<tags>
-<tag>Smoke</tag>
-</tags>
-<status status="PASS" endtime="20180403 22:54:42.370" critical="yes" starttime="20180403 22:54:31.640"></status>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=h_menu</arg>
+</arguments>
+<msg timestamp="20180405 13:44:38.613" level="INFO">Clicking element 'id=h_menu'.</msg>
+<status status="PASS" endtime="20180405 13:44:41.960" starttime="20180405 13:44:38.613"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180405 13:44:43.962" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180405 13:44:43.963" starttime="20180405 13:44:41.961"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css=#h_menu .mmn-wrapper .mmn-sidebar .mmn-box-wpr .mmn-pnl-level-1 ul.szr-13 li.sz-1 span.itm-lnk-level-1</arg>
+</arguments>
+<msg timestamp="20180405 13:44:43.965" level="INFO">Clicking element 'css=#h_menu .mmn-wrapper .mmn-sidebar .mmn-box-wpr .mmn-pnl-level-1 ul.szr-13 li.sz-1 span.itm-lnk-level-1'.</msg>
+<status status="PASS" endtime="20180405 13:44:44.659" starttime="20180405 13:44:43.964"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180405 13:44:46.660" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180405 13:44:46.660" starttime="20180405 13:44:44.659"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css=#h_menu .mmn-wrapper .mmn-sidebar .mmn-box-wpr .mmn-pnl-level-1 ul.szr-13 li.sz-2 span.itm-lnk-level-1</arg>
+</arguments>
+<msg timestamp="20180405 13:44:46.661" level="INFO">Clicking element 'css=#h_menu .mmn-wrapper .mmn-sidebar .mmn-box-wpr .mmn-pnl-level-1 ul.szr-13 li.sz-2 span.itm-lnk-level-1'.</msg>
+<status status="PASS" endtime="20180405 13:44:47.952" starttime="20180405 13:44:46.660"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180405 13:44:49.953" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180405 13:44:49.954" starttime="20180405 13:44:47.953"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css=#h_menu .mmn-wrapper .mmn-sidebar .mmn-box-wpr .mmn-pnl-level-1 ul.szr-13 li.sz-5 span.itm-lnk-level-1</arg>
+</arguments>
+<msg timestamp="20180405 13:44:49.954" level="INFO">Clicking element 'css=#h_menu .mmn-wrapper .mmn-sidebar .mmn-box-wpr .mmn-pnl-level-1 ul.szr-13 li.sz-5 span.itm-lnk-level-1'.</msg>
+<status status="PASS" endtime="20180405 13:44:50.236" starttime="20180405 13:44:49.954"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180405 13:44:52.239" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180405 13:44:52.239" starttime="20180405 13:44:50.237"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css=#h_menu .mmn-wrapper .mmn-sidebar .mmn-box-wpr .mmn-pnl-level-1 ul.szr-13 li.sz-1 span.itm-lnk-level-1</arg>
+</arguments>
+<msg timestamp="20180405 13:44:52.240" level="INFO">Clicking element 'css=#h_menu .mmn-wrapper .mmn-sidebar .mmn-box-wpr .mmn-pnl-level-1 ul.szr-13 li.sz-1 span.itm-lnk-level-1'.</msg>
+<status status="PASS" endtime="20180405 13:44:52.512" starttime="20180405 13:44:52.239"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180405 13:44:54.513" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180405 13:44:54.513" starttime="20180405 13:44:52.512"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css=li.mmn-item.sz-6 a.itm-lnk-level-3</arg>
+</arguments>
+<msg timestamp="20180405 13:44:54.514" level="INFO">Clicking element 'css=li.mmn-item.sz-6 a.itm-lnk-level-3'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180405 13:44:54.890" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180405 13:44:54.891" starttime="20180405 13:44:54.679"></status>
+</kw>
+<msg timestamp="20180405 13:44:55.056" level="FAIL">ElementNotInteractableException: Message: Element &lt;a class="mmn-itm-link itm-lnk-level-3" href="https://www.americanas.com.br/categoria/368273"&gt; could not be scrolled into view
+</msg>
+<status status="FAIL" endtime="20180405 13:44:55.057" starttime="20180405 13:44:54.514"></status>
+</kw>
+<status status="FAIL" endtime="20180405 13:44:55.077" critical="yes" starttime="20180405 13:43:53.276">ElementNotInteractableException: Message: Element &lt;a class="mmn-itm-link itm-lnk-level-3" href="https://www.americanas.com.br/categoria/368273"&gt; could not be scrolled into view
+</status>
 </test>
 <doc>A resource file with reusable keywords and variables.</doc>
-<status status="PASS" endtime="20180403 22:54:42.371" starttime="20180403 22:54:31.565"></status>
+<status status="FAIL" endtime="20180405 13:44:55.084" starttime="20180405 13:43:52.373"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="1">Critical Tests</stat>
-<stat fail="0" pass="1">All Tests</stat>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
 </total>
 <tag>
-<stat fail="0" pass="1">Smoke</stat>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Amazon" pass="1">Amazon</stat>
+<stat fail="1" id="s1" name="Amazon" pass="0">Amazon</stat>
 </suite>
 </statistics>
 <errors>
