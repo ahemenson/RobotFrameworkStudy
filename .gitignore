@@ -1,0 +1,15 @@
+# ignore generated html files,
+*.html
+
+# ignore generated xml files,
+*.xml
+
+# ignore generated png files,
+*.png
+
+# ignore log files,
+*.log
+
+# ignore directory,
+*.directory
+
