@@ -18,7 +18,7 @@ User must sign in to check out
     Verique se a página da subseção foi aberta
 
 Pagina gshow
-    Abra o ${BROWSER_1} na página <${URL}>
+    Abra o ${BROWSER_2} na página <${URL}>
     Wait Until Page Contains Element              css=#barra-globocom > div > div > ul > li:nth-child(4)
     Click Element                                 css=#barra-globocom > div > div > ul > li:nth-child(4)
     Location Should Be                            https://gshow.globo.com/
@@ -28,7 +28,7 @@ Pagina gshow
     Location Should Be                            http://famosos.globo.com/
     Wait Until Page Contains Element              css=#busca-campo
     Click Element                                 css=#busca-campo
-    Input Text                                    css=#busca-campo                                          Paolla
+    Input Text                                    css=#busca-campo                                                                               Paolla
     Sleep                                         1s
     Mouse Over                                    css=#busca-padrao > div > ul > li:nth-child(1)
     Sleep                                         0.5
@@ -41,6 +41,22 @@ Pagina gshow
     Mouse Over                                    css=#busca-padrao > div > ul > li:nth-child(1)
     Click Element                                 css=#busca-padrao > div > ul > li:nth-child(1)
     Location Should Be                            http://g1.globo.com/tudo-sobre/paolla-oliveira
+    Wait Until Page Contains Element              css=#feed-placeholder
+    Click Element                                 css=#feed-placeholder div._i div._s div:nth-child(1) div.feed-text-wrapper a.feed-post-link
+    Go Back
+
+    Wait Until Page Contains Element              css=#feed-placeholder
+    Click Element                                 css=#feed-placeholder div._i div._s div:nth-child(2) div.feed-text-wrapper a.feed-post-link
+    Go Back
+
+    Wait Until Page Contains Element              css=#feed-placeholder
+    Click Element                                 css=#feed-placeholder div._i div._s div:nth-child(3) div.feed-text-wrapper a.feed-post-link
+    Go Back
+
+    Wait Until Page Contains Element              css=#feed-placeholder
+    Click Element                                 css=#feed-placeholder div._i div._s div:nth-child(4) div.feed-text-wrapper a.feed-post-link
+    Go Back
+    Location Should Be                            http://famosos.globo.com/
 
 
 
