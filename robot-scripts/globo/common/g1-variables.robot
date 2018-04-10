@@ -12,3 +12,4 @@ ${SECAO_04}           css=#menu-1-na-tv > a
 ${TITULO_SECAO_01}    Na TV
 ${SUB_SECAO_01}       id=#menu-2-fantastico
 ${URL_DESTINO_01}        ${URL}/fantastico/
+

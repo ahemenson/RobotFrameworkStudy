@@ -7,11 +7,13 @@ Resource         ../common/g1-variables.robot
 
 *** Keywords ***
 Abra o ${BROWSER} na página <${URL}>
-    Open Browser                        ${URL}                                     ${BROWSER}
+    Open Browser                        ${URL}                                           ${BROWSER}
 
 Clique no menu
     Wait Until Page Contains Element    css=#header-produto .menu-button
-    Click Element                       css=#header-produto .menu-button
+    Mouse Over                          css=#header-produto .menu-button
+    Mouse Out                           css=#header-produto .menu-button
+    Mouse Over                          css=#header-produto .menu-button
 Selecione a seção ${SECAO_01}
     Sleep                               1s
     Mouse Over                          css=#menu-1-na-tv .a.menu-item-link
