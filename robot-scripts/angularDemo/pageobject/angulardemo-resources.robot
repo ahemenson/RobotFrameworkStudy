@@ -18,8 +18,6 @@ Desative o botão check
     Click Element                       id=mat-checkbox-1
     Checkbox Should Not Be Selected     id=mat-checkbox-1
 
-Botao Picker
-    Open Browser                        https://material.angular.io/components/datepicker/overview    ${BROWSER_2}
-    Click button                        mat-icon-button
+
 
 

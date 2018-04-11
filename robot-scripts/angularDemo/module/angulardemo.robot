@@ -38,4 +38,21 @@ Botao Picker
     Mouse Over                                css=#mat-datepicker-0 .mat-calendar-content .mat-calendar-body tr.ng-star-inserted:nth-child(4) td:nth-child(1)
     Mouse Over                                css=#mat-datepicker-0 .mat-calendar-content .mat-calendar-body tr.ng-star-inserted:nth-child(4) td:nth-child(1)
     Click Element                             css=#mat-datepicker-0 .mat-calendar-content .mat-calendar-body tr.ng-star-inserted:nth-child(4) td:nth-child(1)
-    Element Should Contain                    css=mat-form-field.ng-tns-c21-2               4/15/ 2018
+    Element Should Contain                    css=.mat-form-field.ng-tns-c21-2                                                                                   4/15/ 2018
+
+Selecionar opcao da lista
+    Open Browser                              https://material.angular.io/components/select/overview                                                             ${BROWSER_2}
+    Wait Until Page Contains Element          css=#mat-select-2
+    Click Element                             css=#mat-select-2
+    Mouse Over                                css=#mat-option-8 span.mat-option-text
+    Mouse Over                                css=#mat-option-7 span.mat-option-text
+    Mouse Over                                css=#mat-option-9 span.mat-option-text
+    Click Element                             css=#mat-option-8 span.mat-option-text
+    Element Should Contain                    css=.docs-markdown > div:nth-child(8) form.ng-valid > p:nth-child(2)                                               ${FRASE} ${OPCAO_01}
+    Click Element                             css=#mat-select-2
+    Mouse Over                                css=#mat-option-8 span.mat-option-text
+    Mouse Over                                css=#mat-option-7 span.mat-option-text
+    Click Element                             css=#mat-option-9 span.mat-option-text
+    Element Should Contain                    css=.docs-markdown > div:nth-child(8) form.ng-valid > p:nth-child(2)                                               ${FRASE} ${OPCAO_02}
+
+
