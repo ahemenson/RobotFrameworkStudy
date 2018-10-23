@@ -5,6 +5,9 @@ Library     Selenium2Library
 ${URL}      http://automationpractice.com/index.php
 ${BROWSER}      chrome
 
+# Elemento
+
+
 *** Keywords ***
 Abrir navegador
     Open Browser     ${URL}        ${BROWSER}
@@ -30,4 +33,28 @@ Conferir se o produto "${PRODUTO}" foi listado em resultados
 
 Conferir mensagem de erro "${MENSAGEMERRO}" emitida
   Wait Until Element Is Visible    xpath=//*[@id="center_column"]/p[@class='alert alert-warning']
-  Element Text Should Be    id=#center_column     ${MENSAGEMERRO}
+  Element Text Should Be    xpath=//*[@id="center_column"]/p[@class='alert alert-warning']    ${MENSAGEMERRO}
+
+Passar o mouse por cima da categoria "${CATEGORIA}" no menu principal superior de categorias
+  Mouse Over     css=#block_top_menu > ul > li:nth-child(1) > a
+
+Clicar na sub categoria "${SUBCATEGORIA}"
+  Wait Until Element Is Visible    css=#block_top_menu > ul > li:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(3) > a
+  Click Element    css=#block_top_menu > ul > li:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(3) > a
+  Title Should be    Summer Dresses - My Store
+
+Digitar o nome de produto "${PRODUTO}" no campo de pesquisa
+  Wait Until Element Is Visible    css=input#search_query_top.search_query
+  Input Text    css=input#search_query_top.search_query    ${PRODUTO}
+
+Clicar no botão de pesquisa
+  Click Button    css=button.btn.btn-default.button-search
+
+Clicar no botão "Add to cart" do produto
+  Wait Until Element Is Visible    css=a.button.ajax_add_to_cart_button
+  Click Element     css=a.button.ajax_add_to_cart_button
+
+Clicar no botão "Proceed to checkout"
+  Wait Until Element Is Visible    css=a.btn.btn-default.button.button-medium
+  Click Element    css=a.btn.btn-default.button.button-medium
+  Element Should Contain    css=#layer_cart > div.clearfix > div.layer_cart_product.col-xs-12.col-md-6 > h2 > i    Product successfully added to your shopping cart
