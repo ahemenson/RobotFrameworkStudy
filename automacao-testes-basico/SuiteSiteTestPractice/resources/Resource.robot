@@ -5,6 +5,9 @@ Library     Selenium2Library
 ${URL}      http://automationpractice.com/index.php
 ${BROWSER}      chrome
 
+${PRICE}      $16.51
+${QUANTITY_PRODUCT_IN_CART}    1
+
 # Elemento
 
 
@@ -57,4 +60,11 @@ Clicar no botão "Add to cart" do produto
 Clicar no botão "Proceed to checkout"
   Wait Until Element Is Visible    css=a.btn.btn-default.button.button-medium
   Click Element    css=a.btn.btn-default.button.button-medium
-  Element Should Contain    css=#layer_cart > div.clearfix > div.layer_cart_product.col-xs-12.col-md-6 > h2 > i    Product successfully added to your shopping cart
+  Title Should Be    Order - My Store
+  Element Should Contain    css=#product_1_1_0_0 > td.cart_description > p    Faded Short Sleeve T-shirt
+  ${value}= 		Get Text		  id=product_price_1_1_0
+  Should Be Equal    ${value}    ${PRICE}
+  ${Qty}=   Get Value    css=#product_1_1_0_0 > td.cart_quantity.text-center > input[type="hidden"]:nth-child(1)
+  Should Be Equal    ${Qty}    ${QUANTITY_PRODUCT_IN_CART}
+  ${value}= 		Get Text    id=total_product_price_1_1_0
+  Should Be Equal    ${value}    ${PRICE}
