@@ -1,9 +1,12 @@
 *** Settings ***
 Library     Selenium2Library
+Library    Collections
 
 *** Variables ***
 ${URL}      http://automationpractice.com/index.php
 ${BROWSER}      chrome
+
+${L1} = ['a', 'xxx'],
 
 ${PRICE}      $16.51
 ${QUANTITY_PRODUCT_IN_CART}    1

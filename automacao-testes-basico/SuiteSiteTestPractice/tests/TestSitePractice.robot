@@ -2,7 +2,7 @@
 Resource    ../resources/Resource.robot
 
 ### SETUP: Executa keyword antes da suíte (Suite Setup) ou antes de um teste (Test Setup)
-Test Setup          Abrir navegador
+#Test Setup          Abrir navegador
 ### TEARDOWN: Executa keyword depois de uma suíte (Suite Teardown) ou depois de um teste (Test Teardown)
 Test Teardown       Fechar navegador
 
