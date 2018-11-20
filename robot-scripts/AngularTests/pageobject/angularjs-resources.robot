@@ -27,5 +27,6 @@ Selecionar opcao aleatoria
   ${option}=             Convert To String        ${option}
   Log         ${option}
   Select From List By Index          id=month         ${option}
+  ${len}=          Get Length            id=month
+  Log     ${len}
   List Selection Should Be           id=month         ${option}
-  

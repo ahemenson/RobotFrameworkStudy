@@ -13,8 +13,12 @@ ${SELETOR}          id=select_49
 
 ${LABEL_12}         12
 ${LABEL_0}          0
+${LABEL_2}          2
 
 @{RADIO_VALUES}     1      2
 
 
 @{LIST_ITENS}         Mês      Jan     Fev      Mar      Abr      Maio       Jun      Jul       Ago       Set      Out        Nov       Dez
+
+
+@{VALUES_OF_DROPDOWN}       0   1   2   3   4   5   6   7    8   9   10    11   12

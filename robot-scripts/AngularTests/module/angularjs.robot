@@ -3,6 +3,7 @@
 Documentation    A resource file with reusable keywords and variables.
 
 Library          Selenium2Library
+Library          Collections
 Resource         ../pageobject/angularjs-resources.robot
 Resource         ../common/angularjs-variables.robot
 
@@ -60,7 +61,10 @@ TC: Selecionar Radio Aleatorio
   Sleep        3
   ${num}=          Evaluate           random.randint(${LABEL_0}, 2)     random
   Log     ${num}
-  ${value}=            Get From List      @{RADIO_VALUES}         ${num}
+  #${len}=          Get Length             ${RADIO_VALUES}
+  #Log     ${len}
+  #Should be Equal as Integers      ${len}        ${LABEL_2}
+  ${value}=                 ${RADIO_VALUES}         1
   Log     ${value}
   Select Radio Button           sex             ${value}
 
@@ -82,3 +86,14 @@ TC: Selecionar CheckBox
   Checkbox Should Be Selected         id=layered_id_attribute_group_1
   Checkbox Should Be Selected         id=layered_id_attribute_group_3
   Checkbox Should Not Be Selected     id=layered_id_attribute_group_2
+
+TC: Validar valores com valores do dropdown
+  Open Browser      https://pt-br.facebook.com/      ${BROWSER_2}
+  #List Should Have No Selections                   id=month
+  # Selecionar opcao aleatoria         id=month      ${LABEL_12}
+  ${values}=	    Get List Items	     id=month
+  Log    ${values}
+  ${values}=	    Get List Items	     id=month        	values=True
+  Log    ${values}
+  Log    ${VALUES_OF_DROPDOWN}
+  Lists Should Be Equal         ${VALUES_OF_DROPDOWN}      ${values}
